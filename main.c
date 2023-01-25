@@ -102,7 +102,6 @@ int main (int argc, char *argv[])
     printf("-----------------------------------------\n");
     // Always start the machine in Neutral state
     Neutral();
-    //while ((c = getchar()) != 'q')
     while (1)
     {
         c = getchar();
@@ -123,6 +122,6 @@ int main (int argc, char *argv[])
             break;
         }
     }
-    //printf("\n\nThe State Event Machine is stoped by user!!!!\n\n");
+
 }
 /*===================== T h e  e n d ========================================*/
