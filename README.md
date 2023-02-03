@@ -7,7 +7,7 @@ This example is written in standard C language, where a car transmission system 
 * Reverse.
 
 But we can't go to Reverse gear directly from Forward and vice-versa; we need to pass thru Neutral before. Also, in this simple example, we can turn off the engine (i.e. quit the program) only at the Neutral state.
-![State Machine Flowchart](assets/transmission_example.png "State Machine Flowchart")
+![State Machine Flowchart](assets/transmission_example.png "State Machine Flowchart")<br>
 The events and states are associated in a bidimensional array like this example:
 ~~~
 void (* State_Event_Matrix[EVENT][STATE]) () =
