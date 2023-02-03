@@ -17,7 +17,7 @@ void (* State_Event_Matrix[EVENT][STATE]) () =
         Neutral,        // callback function called when Neutral_btn clicked at FORWARD STATE
         Neutral,        // callback function called when Neutral_btn clicked at REVERSE STATE
     },
-    {   // Event Reverse_btn click
+    {   // Event Reverse_btn cli
         Reverse,        // State NEUTRAL
         Not_Valid,      // State FORWARD
         Not_Valid,      // State REVERSE
