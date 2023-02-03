@@ -1,5 +1,5 @@
 # c-EventDrivenStateMachine
-A Event-Driven Finite State Machine written in C for Embedded Systems.
+
 In the programming field, a event-driven state machine is charecterized if the transitions from one state to another is triggered by an event or a message.
 This example is written in standard C language, where a car transmission system can be in one of the following states:
 * Forward;
