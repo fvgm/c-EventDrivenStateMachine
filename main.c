@@ -1,8 +1,34 @@
+/*
+This is an implementation of a Event Driven Finite State Machine.
+
+Licensed under the MIT License <http://opensource.org/licenses/MIT>.
+SPDX-License-Identifier: MIT
+Copyright (c) 2023 Fernando Magro and other contributors.
+
+Permission is hereby  granted, free of charge, to any  person obtaining a copy
+of this software and associated  documentation files (the "Software"), to deal
+in the Software  without restriction, including without  limitation the rights
+to  use, copy,  modify, merge,  publish, distribute,  sublicense, and/or  sell
+copies  of  the Software,  and  to  permit persons  to  whom  the Software  is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE  IS PROVIDED "AS  IS", WITHOUT WARRANTY  OF ANY KIND,  EXPRESS OR
+IMPLIED,  INCLUDING BUT  NOT  LIMITED TO  THE  WARRANTIES OF  MERCHANTABILITY,
+FITNESS FOR  A PARTICULAR PURPOSE AND  NONINFRINGEMENT. IN NO EVENT  SHALL THE
+AUTHORS  OR COPYRIGHT  HOLDERS  BE  LIABLE FOR  ANY  CLAIM,  DAMAGES OR  OTHER
+LIABILITY, WHETHER IN AN ACTION OF  CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE  OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
 /*===========================================================================*/
-// STATE EVENT MACHINE EXAMPLE
+// STATE DRIVEN FINITE STATE MACHINE EXAMPLE
 
 #define EVENT    4
 #define STATE    3
@@ -17,25 +43,25 @@ enum {
     NEUTRAL,
     FORWARD,
     REVERSE
-};
+}; // all the valid states
 
 enum {
     NEUTRAL_BTN,
     REVERSE_BTN,
     FORWARD_BTN,
     QUIT_BTN
-};
+}; // all the possible events
 
-unsigned char currentState = NEUTRAL;
+unsigned char currentState = NEUTRAL; // set the initial state.
 
 
 /*===========================================================================*/
 void (* State_Event_Matrix[EVENT][STATE]) () =
 {
     {   // Event Neutral_btn
-        Not_Valid,      // State NEUTRAL
-        Neutral,        // State FORWARD
-        Neutral,        // State REVERSE
+        Not_Valid,      // callback function called when Neutral_btn clicked at NEUTRAL STATE
+        Neutral,        // callback function called when Neutral_btn clicked at FORWARD STATE
+        Neutral,        // callback function called when Neutral_btn clicked at REVERSE STATE
     },
     {   // Event Reverse_btn
         Reverse,        // State NEUTRAL
